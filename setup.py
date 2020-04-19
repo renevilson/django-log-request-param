@@ -16,8 +16,8 @@ def get_packages(package):
 setup(
     name="django-log-request-param",
     version="1.0",
-    url="https://gitlab.com/ReneVilson/django_logger",
+    url="https://gitlab.com/ReneVilson/django-log-request-param",
     author="renevilson",
     author_email="vildanovrinat94@gmail.com",
-    packages=get_packages("django_log_requests"),
+    packages=get_packages("django-log-request-param")
 )

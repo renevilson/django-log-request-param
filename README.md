@@ -41,9 +41,20 @@ Secondly, need to add middleware class to your `MIDDLEWARE_CLASSES`:
 ```python
 MIDDLEWARE_CLASSES = [
     ...,
-    "django-log-request-param.middleware.RequestMiddleware",
+    "django_logger.middleware.RequestMiddleware",
     ...,
 ]
 ```
 
-Configure LOGGING settings. Add 
+Configure LOGGING settings. Add to filters:
+```python
+LOGGING = {
+    # other settings
+    'filters': {
+        'request_id': {
+            '()': 'django_logger.filters.RequestIDFilter'
+        }
+    },
+    # other settings
+}
+```

@@ -1,6 +1,6 @@
 import logging
 
-from django_log_requests import local, response_attr, EMPTY_PARAM
+from django_logger import local, response_attr, EMPTY_PARAM
 
 
 class RequestIDFilter(logging.Filter):

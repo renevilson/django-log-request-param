@@ -15,10 +15,9 @@ Django-log-request-param
 
 Django settings
 ---------------
-On django settings you can override search options. For example, if you have custom user model and it's has user
-field instead username, you need to override USER_NAME on setting.
+On django settings you can override search parameters.
 <br>
-There are parameters than you can override:
+There are parameters than you can use:
 
 1. **REQUEST_ID_HEADER**. Default value: "HTTP_X_REQUEST_ID"
 2. **REQUEST_METHOD**. Default value: "method"
@@ -56,5 +55,21 @@ LOGGING = {
         }
     },
     # other settings
+}
+```
+Add params to formatter:
+```python
+LOGGING = {
+    # other settings
+    'filters': {
+        'request_id': {
+            '()': 'django_logger.filters.RequestIDFilter'
+        }
+    },
+    'formatters': {
+        'standard': {
+            'format': ''  # Params that you want to see in yor logs
+        },
+    },
 }
 ```

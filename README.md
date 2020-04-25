@@ -15,9 +15,7 @@ Django-log-request-param
 
 Django settings
 ---------------
-On django settings you can override search parameters.
-<br>
-There are parameters than you can use:
+On django settings you can override options:
 
 1. **REQUEST_ID_HEADER**. Default value: "HTTP_X_REQUEST_ID"
 2. **REQUEST_METHOD**. Default value: "method"
